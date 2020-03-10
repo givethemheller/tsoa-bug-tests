@@ -1,0 +1,27 @@
+{
+  "swagger": {
+    "outputDirectory": "./swagger",
+    "entryFile": "./src/server.ts",
+    "basePath": "v1/",
+    "schemes": [
+      "http"
+    ],
+    "host": [
+      "localhost:3002"
+    ],
+    "specVersion": 3,
+    "yaml": true
+  },
+  "routes": {
+    "basePath": "/v1",
+    "entryFile": "./src/server.ts",
+    "routesDir": "./src/",
+    "controllerPathGlobs": [
+      "./src/route-controllers/**.*"
+    ],
+    "middleware": "express"
+  },
+  "ignore": [
+    "**/node_modules/**"
+  ]
+}
