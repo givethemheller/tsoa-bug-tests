@@ -7,5 +7,5 @@ export interface User {
     bazz: string;
 }
 export interface OmissionUser {
-    user: User;
+    user: Omit<User, "foo">;
 }

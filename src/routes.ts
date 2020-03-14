@@ -9,6 +9,24 @@ import * as express from 'express';
 // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
 
 const models: TsoaRoute.Models = {
+    "Pick_User.Exclude_keyofUser.%22foo%22__": {
+        "dataType": "refAlias",
+        "type": { "dataType": "nestedObjectLiteral", "nestedProperties": { "id": { "dataType": "string", "required": true }, "prop1": { "dataType": "string", "required": true }, "prop2": { "dataType": "string", "required": true }, "bar": { "dataType": "string", "required": true }, "bazz": { "dataType": "string", "required": true } }, "validators": {} },
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+    "Omit_User.%22foo%22_": {
+        "dataType": "refAlias",
+        "type": { "ref": "Pick_User.Exclude_keyofUser.%22foo%22__", "validators": {} },
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+    "OmissionUser": {
+        "dataType": "refObject",
+        "properties": {
+            "user": { "ref": "Omit_User.%22foo%22_", "required": true },
+        },
+        "additionalProperties": true,
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
     "User": {
         "dataType": "refObject",
         "properties": {
@@ -18,14 +36,6 @@ const models: TsoaRoute.Models = {
             "foo": { "dataType": "string", "required": true },
             "bar": { "dataType": "string", "required": true },
             "bazz": { "dataType": "string", "required": true },
-        },
-        "additionalProperties": true,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "OmissionUser": {
-        "dataType": "refObject",
-        "properties": {
-            "user": { "ref": "User", "required": true },
         },
         "additionalProperties": true,
     },

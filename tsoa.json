@@ -20,8 +20,5 @@
       "./src/route-controllers/**.*"
     ],
     "middleware": "express"
-  },
-  "ignore": [
-    "**/node_modules/**"
-  ]
+  }
 }
