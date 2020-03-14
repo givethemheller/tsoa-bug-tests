@@ -8,5 +8,5 @@ export interface User {
 }
 
 export interface OmissionUser {
-  user: User
+  user: Omit<User, "foo">
 }
