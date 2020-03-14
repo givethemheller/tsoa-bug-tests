@@ -1,0 +1,189 @@
+components:
+    examples: {}
+    headers: {}
+    parameters: {}
+    requestBodies: {}
+    responses: {}
+    schemas:
+        User:
+            properties:
+                id:
+                    type: string
+                prop1:
+                    type: string
+                prop2:
+                    type: string
+                foo:
+                    type: string
+                bar:
+                    type: string
+                bazz:
+                    type: string
+            required:
+                - id
+                - prop1
+                - prop2
+                - foo
+                - bar
+                - bazz
+            type: object
+            additionalProperties: true
+        OmissionUser:
+            properties:
+                user:
+                    $ref: '#/components/schemas/User'
+            required:
+                - user
+            type: object
+            additionalProperties: true
+    securitySchemes: {}
+info:
+    title: '@cannabinder/api'
+    version: 1.0.6
+    description: 'Cannabinder API with TSOA generator and openAPI sdk generator'
+openapi: 3.0.0
+paths:
+    /user:
+        get:
+            operationId: AdminFindUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/OmissionUser'
+                                type: array
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters: []
+        post:
+            operationId: CreateUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/User'
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters: []
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/User'
+    /user/find:
+        post:
+            operationId: FindUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                items:
+                                    $ref: '#/components/schemas/User'
+                                type: array
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters:
+                -
+                    in: header
+                    name: page
+                    required: false
+                    schema:
+                        format: double
+                        type: number
+                -
+                    in: header
+                    name: count
+                    required: false
+                    schema:
+                        format: double
+                        type: number
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            properties:
+                                conditions:
+                                    additionalProperties: true
+                                    type: object
+                            required:
+                                - conditions
+                            type: object
+    '/user/{UserId}':
+        get:
+            operationId: GetUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/User'
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters:
+                -
+                    in: path
+                    name: UserId
+                    required: true
+                    schema:
+                        type: string
+        put:
+            operationId: UpdateUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/User'
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters:
+                -
+                    in: path
+                    name: UserId
+                    required: true
+                    schema:
+                        type: string
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/User'
+        delete:
+            operationId: DeleteUser
+            responses:
+                '200':
+                    content:
+                        application/json:
+                            schema:
+                                type: boolean
+                    description: Ok
+            tags:
+                - User
+            security: []
+            parameters:
+                -
+                    in: path
+                    name: UserId
+                    required: true
+                    schema:
+                        type: string
+servers:
+    -
+        url: 'http://localhost:3002/v1'

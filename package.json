@@ -9,12 +9,9 @@
     "debug": "cross-env NODE_ENV=debug node --inspect -r ts-node/register ./src/server.ts",
     "start": "node ./build/server.js",
     "transpile": "yarn tsc -p tsconfig.prod.json",
-    "build": "yarn tsoa:routes  && yarn run transpile && yarn run tsoa:swagger && yarn run gen-api",
-    "gen-api-java": "node ../api-consumer-sdk/clearBuild.js && java -jar ../../node_modules/@openapitools/openapi-generator-cli/bin/openapi-generator.jar  generate -i ./dist/swagger.yaml -g typescript-node  --additional-properties=supportsES6=true -o ../api-consumer-sdk/src/  ",
-    "gen-api": "node clear-sdk.js && openapi-generator generate -i ./swagger/swagger.yaml -g typescript-node -o ../api-consumer-sdk/src/  --additional-properties supportsES6=true ",
+    "build": "yarn tsoa:routes  && yarn run transpile && yarn run tsoa:swagger",
     "tsoa:routes": "yarn tsoa routes -c ./tsoa.json",
     "tsoa:swagger": "yarn tsoa swagger -c ./tsoa.json",
-    "typeorm": "ts-node -P ./tsconfig.json ./node_modules/.bin/typeorm",
     "test": "cross-env TS_NODE_PROJECT=./api/tsconfig.json mocha -t 15000 -r ts-node/register \"./api/**/*.spec.ts\""
   },
   "bin": {
@@ -35,7 +32,7 @@
     "reflect-metadata": "^0.1.13",
     "shortid": "^2.2.15",
     "superagent": "^5.0.2",
-    "tsoa": "github:lukeautry/tsoa#3.x",
+    "tsoa": "^3.0.3",
     "typeorm": "^0.2.16"
   },
   "devDependencies": {

@@ -4185,19 +4185,19 @@ tslint@^5.20.0:
     tslib "^1.8.0"
     tsutils "^2.29.0"
 
-tsoa@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/tsoa/-/tsoa-3.0.2.tgz#87cbb8d4cda171b43989b403014bea5185f7a1c3"
-  integrity sha512-3yT5+jI9NlTku4bErPtWOJkE7QX/FoT6c8pon2zDhTOA4Cz9A5/SRxlS75UR4WBfyz37tfz1yn5C27rvhiME8Q==
+tsoa@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/tsoa/-/tsoa-3.0.3.tgz#b662489504e7a91a864a562cd5d5229d54c08a89"
+  integrity sha512-5EyC0WrhkdTNbq7Qm/T6HJltHijbmcv2apAjmNwgFCgcJi2mxDYeAmcCWRntMMUl1QaGOSqyvX7Z7ym26D3HzQ==
   dependencies:
     fs-extra "^8.1.0"
     handlebars "^4.5.3"
     merge "^1.2.1"
     minimatch "^3.0.4"
     moment "^2.24.0"
-    typescript "^3.5.3"
+    typescript "^3.8.2"
     typescript-formatter "^7.2.2"
-    validator "^11.1.0"
+    validator "^12.2.0"
     yamljs "^0.3.0"
     yargs "^14.0.0"
 
@@ -4272,7 +4272,7 @@ typescript-formatter@^7.2.2:
     commandpost "^1.0.0"
     editorconfig "^0.15.0"
 
-typescript@^3.5.3, typescript@^3.7.5:
+typescript@^3.7.5, typescript@^3.8.2:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
   integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
@@ -4391,10 +4391,10 @@ v8-compile-cache@2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.0.3.tgz#00f7494d2ae2b688cfe2899df6ed2c54bef91dbe"
   integrity sha512-CNmdbwQMBjwr9Gsmohvm0pbL954tJrNzf6gWL3K+QMQf00PF7ERGrEiLgjuU3mKreLC2MeGhUsNV9ybTbLgd3w==
 
-validator@^11.1.0:
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-11.1.0.tgz#ac18cac42e0aa5902b603d7a5d9b7827e2346ac4"
-  integrity sha512-qiQ5ktdO7CD6C/5/mYV4jku/7qnqzjrxb3C/Q5wR3vGGinHTgJZN/TdFT3ZX4vXhX2R1PXx42fB1cn5W+uJ4lg==
+validator@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-12.2.0.tgz#660d47e96267033fd070096c3b1a6f2db4380a0a"
+  integrity sha512-jJfE/DW6tIK1Ek8nCfNFqt8Wb3nzMoAbocBF6/Icgg1ZFSBpObdnwVY2jQj6qUqzhx5jc71fpvBWyLGO7Xl+nQ==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"
