@@ -36,6 +36,46 @@ components:
                 - user
             type: object
             additionalProperties: true
+        Pick_User.Exclude_keyofUser.%22prop2%22__:
+            properties:
+                foo:
+                    type: string
+                id:
+                    type: string
+                prop1:
+                    type: string
+                bar:
+                    type: string
+                bazz:
+                    type: string
+            required:
+                - foo
+                - id
+                - prop1
+                - bar
+                - bazz
+            type: object
+            description: 'From T, pick a set of properties whose keys are in the union K'
+        SecondOmit:
+            properties:
+                foo:
+                    type: string
+                id:
+                    type: string
+                prop1:
+                    type: string
+                bar:
+                    type: string
+                bazz:
+                    type: string
+            required:
+                - foo
+                - id
+                - prop1
+                - bar
+                - bazz
+            type: object
+            additionalProperties: true
         User:
             properties:
                 id:
@@ -110,7 +150,7 @@ paths:
                         application/json:
                             schema:
                                 items:
-                                    $ref: '#/components/schemas/User'
+                                    $ref: '#/components/schemas/SecondOmit'
                                 type: array
                     description: Ok
             tags:

@@ -10,3 +10,5 @@ export interface User {
 export interface OmissionUser {
   user: Omit<User, "foo">
 }
+
+export interface SecondOmit extends Omit<User, "prop2"> { }

@@ -26,6 +26,23 @@ var models = {
         "additionalProperties": true,
     },
     // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+    "Pick_User.Exclude_keyofUser.%22prop2%22__": {
+        "dataType": "refAlias",
+        "type": { "dataType": "nestedObjectLiteral", "nestedProperties": { "foo": { "dataType": "string", "required": true }, "id": { "dataType": "string", "required": true }, "prop1": { "dataType": "string", "required": true }, "bar": { "dataType": "string", "required": true }, "bazz": { "dataType": "string", "required": true } }, "validators": {} },
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+    "SecondOmit": {
+        "dataType": "refObject",
+        "properties": {
+            "foo": { "dataType": "string", "required": true },
+            "id": { "dataType": "string", "required": true },
+            "prop1": { "dataType": "string", "required": true },
+            "bar": { "dataType": "string", "required": true },
+            "bazz": { "dataType": "string", "required": true },
+        },
+        "additionalProperties": true,
+    },
+    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
     "User": {
         "dataType": "refObject",
         "properties": {

@@ -18,6 +18,9 @@
     "serveCbd": "./cli-serve.js"
   },
   "dependencies": {
+    "@types/mongodb": "3.1.31",
+    "emotion-theming": "^10.0.27",
+    "mongodb": "3.5.5",
     "@openapitools/openapi-generator-cli": "^1.0.10-4.2.3",
     "@sendgrid/mail": "6.5.3",
     "body-parser": "^1.18.3",

@@ -11,7 +11,7 @@ import {
   Delete,
 } from "tsoa";
 
-import { User, OmissionUser } from "./User"
+import { User, OmissionUser, SecondOmit } from "./User"
 import * as express from "express";
 
 
@@ -32,8 +32,8 @@ export class UserController {
     @Body() requestBody: { conditions: any },
     @Header("page") page?: number,
     @Header("count") count?: number
-  ): Promise<User[]> {
-    return [] as User[];
+  ): Promise<SecondOmit[]> {
+    return [] as SecondOmit[];
   }
 
   @Get("{UserId}")
